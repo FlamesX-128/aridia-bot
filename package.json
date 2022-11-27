@@ -1,0 +1,25 @@
+{
+	"name": "aridia-bot",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"eris": "^0.17.1",
+		"require-all": "^3.0.0"
+	},
+	"devDependencies": {
+		"@types/node": "^18.11.9",
+		"@types/require-all": "^3.0.3",
+		"@typescript-eslint/eslint-plugin": "^5.44.0",
+		"@typescript-eslint/parser": "^5.44.0",
+		"dotenv": "^16.0.3",
+		"eslint": "^8.28.0",
+		"typescript": "^4.9.3"
+	}
+}
