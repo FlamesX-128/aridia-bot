@@ -1,10 +1,8 @@
-import { Post } from '../@types/aridia'
-
 const URL = process.env['URL'] as string
 
-const getPosts = async (): Promise<Post[]> => {
-    const resp = await fetch(`${URL}/api/posts`, {
-        method: 'GET',
+const get = async <T> (path: string, method: string): Promise<T> => {
+    const resp = await fetch(`${URL}${path}`, {
+        method,
         headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
@@ -12,7 +10,7 @@ const getPosts = async (): Promise<Post[]> => {
         credentials: 'include'
     })
 
-    return (await resp.json()) as Post[]
+    return (await resp.json()) as T
 }
 
-export { getPosts }
+export { get }
